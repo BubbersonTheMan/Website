@@ -3,7 +3,7 @@
 This is your README. READMEs are where you can communicate what your project is and how to use it.
 
 
-bubba wiggins
+I am Manny the bubyManny
 i love this
 
 This is my first thing
