@@ -1,6 +1,9 @@
-print("Hello")
+import math
+import time
 
-def cat(a,s):
-    print(a)
-    print(s)
 
+print
+
+for i in range(1,11):
+    if i == 3:
+        break
