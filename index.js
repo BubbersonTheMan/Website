@@ -1,0 +1,39 @@
+const fileInput = document.getElementById('file');
+const submitBtn = document.getElementById('submitBtn'); 
+const inputElement = document.getElementById("input");
+const paragraph = document.getElementById("Paragraph")
+const Bits = document.getElementById("Bits")
+
+// inputElement.addEventListener("change", handlefiles, true)
+function handlefiles() {
+    const files = this.files
+    console.log(files)
+}   
+
+submitBtn.addEventListener("click", function() {
+    const file = fileInput.files[0];
+    
+    if (file){
+        const fileSizeBytes = file.size
+        const fileSizeBites = file.size * 8
+
+        let humanReadableSize;
+
+        if (fileSizeBytes < 1024) {
+            humanReadableSize = `${fileSizeBytes} Bytes`;
+        } else if (fileSizeBytes < 1024 * 1024) {
+            humanReadableSize = `${(fileSizeBytes / 1024)} Kilobytes (KB)`;
+        } else if (fileSizeBytes < 1024 * 1024 * 1024) {
+            humanReadableSize = `${(fileSizeBytes / (1024 * 1024))} Megabytes (MB)`;
+        } else {
+            humanReadableSize = `${(fileSizeBytes / (1024 * 1024 * 1024))} Gigabytes (GB)`;
+        }
+        paragraph.innerHTML = `File size: ${humanReadableSize}`;
+        Bits.innerHTML = `File size ${fileSizeBites} bits`;
+        console.log(`File size: ${fileSizeBytes} bytes`);
+    }else{
+        paragraph.innerHTML = `No File Selected`
+        console.log('No file selected.');
+    }
+    
+});
