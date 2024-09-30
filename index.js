@@ -1,8 +1,9 @@
 const fileInput = document.getElementById('file');
 const submitBtn = document.getElementById('submitBtn'); 
 const inputElement = document.getElementById("input");
-const paragraph = document.getElementById("Paragraph")
+const Paragraph = document.getElementById("Paragraph")
 const Bits = document.getElementById("Bits")
+const Name = document.getElementById("Name")
 
 // inputElement.addEventListener("change", handlefiles, true)
 function handlefiles() {
@@ -16,6 +17,7 @@ submitBtn.addEventListener("click", function() {
     if (file){
         const fileSizeBytes = file.size
         const fileSizeBites = file.size * 8
+        const name = file.name
 
         let humanReadableSize;
 
@@ -28,11 +30,12 @@ submitBtn.addEventListener("click", function() {
         } else {
             humanReadableSize = `${(fileSizeBytes / (1024 * 1024 * 1024))} Gigabytes (GB)`;
         }
-        paragraph.innerHTML = `File size: ${humanReadableSize}`;
-        Bits.innerHTML = `File size ${fileSizeBites} bits`;
+        Paragraph.innerHTML = `File size: ${humanReadableSize}`;
+        Bits.innerHTML = `File size: ${fileSizeBites} bits`;
+        Name.innerHTML = `File name: ${name}`;
         console.log(`File size: ${fileSizeBytes} bytes`);
     }else{
-        paragraph.innerHTML = `No File Selected`
+        Paragraph.innerHTML = `No File Selected`
         console.log('No file selected.');
     }
     
