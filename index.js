@@ -35,3 +35,9 @@ submitBtn.addEventListener("click", function() {
     }
     
 });
+
+Clear.addEventListener("click", function() {
+    Name.innerHTML = ""
+    paragraph.innerHTML = ""
+    Bits.innerHTML = ""
+})
