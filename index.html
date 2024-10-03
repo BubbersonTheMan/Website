@@ -4,18 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=6.0">
     <title>File Upload</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="icon" type="image/x-icon" href="/rainbow.png">
 </head>
 <body>
-    <input type="file" id="file">
-    <!-- <input type="file" id="input" multiple> -->
-    <button id="submitBtn">Submit</button>
+    <!-- <input type="file" id="file">
+    <label for="file">Upload File</label> -->
+    <input type="file" id="fileUpload" style="display: none;">
+    <label for="fileUpload" class="Button">Upload File</label>
+    <button id="submitBtn" class="Submit">Submit</button>
+    <button id="clearBtn" class="Clear">Clear</button><br>
     <div>
-        <p id="Paragraph"></p>
-        <p id="Bits"></p>
-        <p id="Name"></p>
+        <p id="Name"></p><br>
+        <p id="paragraph"></p><br>
+        <p id="bits"></p><br>
     </div>
-    
-    
     <ol>
         <ol>Bits</ol>
         <ol>Byte. 1 Byte is 8 Bits. This is what the file size is returned in.</ol>
@@ -23,6 +26,20 @@
         <ol>Megabyte. 1 Megabyte is 1,000 Kilobytes</ol>
         <ol>Mebibyte</ol>
     </ol>
+    <div class="images">
+        <img class="hue-rotate-filter" src="rainbow.png">
+        <img class="blur-filter" src="rainbow.png">
+        <img class="grayscale-filter" src="rainbow.png">
+        <img class="opacity-filter" src="rainbow.png">
+        <img class="saturate-filter" src="rainbow.png">
+        <img class="sepia-filter" src="rainbow.png">
+        <img class="invert-filter" src="rainbow.png">
+        <img class="brightness-filter" src="rainbow.png">
+        <img class="contrast-filter" src="rainbow.png">
+        <img class="shadow-filter" src="rainbow.png">
+    </div>
+    
     <script src="index.js"></script>
+    <p1></p1>
 </body>
 </html>
